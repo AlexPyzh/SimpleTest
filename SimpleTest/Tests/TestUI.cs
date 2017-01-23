@@ -52,7 +52,7 @@ namespace SimpleTest
         [OneTimeTearDown]
         public void teardown()
         {
-           // driver.Quit();
+           driver.Quit();
         }
 
 

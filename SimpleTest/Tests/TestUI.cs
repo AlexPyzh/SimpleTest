@@ -9,7 +9,7 @@ using SimpleTest.Pages;
 namespace SimpleTest
 {
     [TestFixture]
-    public class ArsOffSiteTest
+    public class ArsOffSiteUITests
     {
 
         static IWebDriver driver = new FirefoxDriver();
@@ -49,10 +49,12 @@ namespace SimpleTest
 
         }
 
+
+
         [OneTimeTearDown]
         public void teardown()
         {
-           driver.Quit();
+          driver.Quit();
         }
 
 

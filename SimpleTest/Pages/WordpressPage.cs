@@ -47,11 +47,31 @@ namespace SimpleTest.Pages
         [FindsBy(How = How.Id, Using = "menu-item-968")]
         public IWebElement submenuPresentations;
 
-//=====================================================================================
+        //=====================================================================================
+
+        [FindsBy(How = How.Id, Using = "menu-item-885")]
+        public IWebElement menuContacty;
+
+        [FindsBy(How = How.Id, Using = "menu-item-97")]
+        public IWebElement submenuNashiContacty;
+
+        [FindsBy(How = How.Name, Using = "your-name")]
+        public IWebElement inputYourName;
+
+        [FindsBy(How = How.Name, Using = "your-email")]
+        public IWebElement inputYourEmail;
+
+        [FindsBy(How = How.Name, Using = "your-message")]
+        public IWebElement textareaYourMessage;
+
+        [FindsBy(How = How.CssSelector, Using = "#wpcf7-f1564-p88-o1 > form > p:nth-child(5) > input")]
+        public IWebElement bntSendMessage;
+
+        [FindsBy(How = How.CssSelector, Using = "#wpcf7-f1564-p88-o1 > form > div.wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok")]
+        public IWebElement messageSendStatus;
 
 
-
-//=====================================================================================
+        //=====================================================================================
 
         [FindsBy(How = How.Name, Using = "q")]
         public IWebElement searchText;

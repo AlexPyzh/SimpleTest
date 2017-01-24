@@ -17,8 +17,7 @@ namespace SimpleTest
 
         [Test]
         public void TestMainPage()
-        {
-            //page.GetWebDriver().Navigate().GoToUrl("http://ars.atom.gov.ua");
+        {            
             page.GetMainPage();
             Assert.IsTrue(driver.PageSource.Contains("Інформація про хід виконання робіт ВП АРС"));
         }

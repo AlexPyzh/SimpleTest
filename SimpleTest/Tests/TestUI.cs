@@ -16,13 +16,6 @@ namespace SimpleTest
         WordpressPage page = new WordpressPage(driver);
 
         [Test]
-        public void TestMainPage()
-        {            
-            page.GetMainPage();
-            Assert.IsTrue(driver.PageSource.Contains("Інформація про хід виконання робіт ВП АРС"));
-        }
-
-        [Test]
         public void TestMenuInformBlock()
         {
             page.GetMainPage();
@@ -48,9 +41,14 @@ namespace SimpleTest
 
         }
 
+//        [Test]
+  //      public void TestMainPage()
+    //    {            
+      //      page.GetMainPage();
+        //    Assert.IsTrue(driver.PageSource.Contains("Інформація про хід виконання робіт ВП АРС"));
+      //  }
 
-
-        [OneTimeTearDown]
+        [TearDown]
         public void teardown()
         {
           driver.Quit();

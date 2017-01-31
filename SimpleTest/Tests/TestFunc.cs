@@ -38,7 +38,7 @@ namespace SimpleTest
             
         }
 
-        [OneTimeTearDown]
+        [TearDown]
         public void TearDown()
         {
            driver.Quit();

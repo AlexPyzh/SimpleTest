@@ -15,7 +15,7 @@ namespace SimpleTest
 
         public IWebDriver GetWebDriver()
         {
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(15));
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
             return driver;
         }
 

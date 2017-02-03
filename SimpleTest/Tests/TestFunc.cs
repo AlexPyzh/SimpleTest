@@ -34,11 +34,11 @@ namespace SimpleTest
             wait.Until(ExpectedConditions.TextToBePresentInElement(page.messageSendStatus, "Thank you for your message. It has been sent"));
 
             Assert.IsTrue(page.messageSendStatus.Text.Contains("Thank you for your message. It has been sent"));
-           
-            
+
+
         }
 
-        [TearDown]
+        [OneTimeTearDown]
         public void TearDown()
         {
            driver.Quit();

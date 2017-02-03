@@ -27,7 +27,11 @@ namespace SimpleTest.Pages
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div[2]/div/h1")]
         public IWebElement headerWordoressPage;
 
-//=====================================================================================
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div[1]/div/h1")]
+        public IWebElement headerWordoressPage2;
+
+
+        //InformBlock=====================================================================================
 
         [FindsBy(How = How.Id, Using = "menu-item-886")]
         public IWebElement menuInformBlock;
@@ -47,7 +51,76 @@ namespace SimpleTest.Pages
         [FindsBy(How = How.Id, Using = "menu-item-968")]
         public IWebElement submenuPresentations;
 
-        //=====================================================================================
+        //Diyalnist=====================================================================================
+
+        [FindsBy(How = How.Id, Using = "menu-item-416")]
+        public IWebElement menuDiyalnist;
+
+        [FindsBy(How = How.Id, Using = "menu-item-937")]
+        public IWebElement submenuStructure;
+
+        [FindsBy(How = How.Id, Using = "menu-item-945")]
+        public IWebElement submenuCertification;
+
+        [FindsBy(How = How.Id, Using = "menu-item-110")]
+        public IWebElement submenuKerivnyctvo;
+
+        [FindsBy(How = How.Id, Using = "menu-item-946")]
+        public IWebElement submenuZayavyKerivnytstva;
+
+        [FindsBy(How = How.Id, Using = "menu-item-2039")]
+        public IWebElement submenuZvernennyaDyrectora;
+
+        //KulturaBezpeky=====================================================================================
+
+        [FindsBy(How = How.Id, Using = "menu-item-947")]
+        public IWebElement menuKulturaBezpeky;
+
+        [FindsBy(How = How.Id, Using = "menu-item-2808")]
+        public IWebElement submenuPlakaty;
+
+        //ProtydiyaKorruptsii=====================================================================================
+
+        [FindsBy(How = How.Id, Using = "menu-item-2566")]
+        public IWebElement menuProtydiyaKorruptsii;
+
+        [FindsBy(How = How.Id, Using = "menu-item-2588")]
+        public IWebElement submenuAntikorrupZakon;
+
+        [FindsBy(How = How.Id, Using = "menu-item-2661")]
+        public IWebElement submenuMetodychniRekomendatsii;
+
+        [FindsBy(How = How.Id, Using = "menu-item-2589")]
+        public IWebElement submenuVidpovidalnist;
+
+        [FindsBy(How = How.Id, Using = "menu-item-2590")]
+        public IWebElement submenuNovynytaPublikatsii;
+
+        [FindsBy(How = How.Id, Using = "menu-item-2591")]
+        public IWebElement submenuSkrynkaDoviry;
+
+        //ProtydiyaKorruptsii=====================================================================================
+
+        [FindsBy(How = How.Id, Using = "menu-item-1556")]
+        public IWebElement menuNTC;
+
+        [FindsBy(How = How.Id, Using = "menu-item-1340")]
+        public IWebElement jsmenuZagalniVidomosti;
+
+        [FindsBy(How = How.Id, Using = "menu-item-2759")]
+        public IWebElement jssubmenuUCNK;
+
+        [FindsBy(How = How.Id, Using = "menu-item-212")]
+        public IWebElement jsmenuProgramyPidgotovky;
+
+        [FindsBy(How = How.Id, Using = "menu-item-309")]
+        public IWebElement jssubmenuObschayaPidgotovka;
+
+
+
+
+        //SendMail=====================================================================================
+
 
         [FindsBy(How = How.Id, Using = "menu-item-885")]
         public IWebElement menuContacty;

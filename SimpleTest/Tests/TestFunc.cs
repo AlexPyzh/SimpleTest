@@ -20,7 +20,36 @@ namespace SimpleTest
         WordpressPage page = new WordpressPage(driver);
 
         [Test]
-        public void TestSendContactForm()
+        public void Test1IncorrectFilling()
+        {
+            page.GetMainPage();
+            page.dropDownManMenu(page.menuContacty);
+            page.submenuNashiContacty.Click();
+                        
+            page.bntSendMessage.Click();
+            Assert.IsTrue(page.AlertName.Text.Contains("The field is required"));
+            Assert.IsTrue(page.AlertEmail.Text.Contains("The field is required"));
+
+            page.inputYourEmail.Clear();
+            page.inputYourEmail.SendKeys("   ");
+            page.bntSendMessage.Click();
+            Assert.IsTrue(page.AlertEmail.Text.Contains("The field is required"));
+
+            page.inputYourEmail.Clear();
+            page.inputYourEmail.SendKeys("email");
+            page.bntSendMessage.Click();
+            Assert.IsTrue(page.AlertEmail.Text.Contains("The e-mail address entered is invalid"));
+
+            page.inputYourEmail.Clear();
+            page.inputYourEmail.SendKeys("!@$%");
+            page.bntSendMessage.Click();
+            Assert.IsTrue(page.AlertEmail.Text.Contains("The e-mail address entered is invalid"));    
+                        
+        }
+
+
+        [Test]
+        public void Test2SendContactForm()
         {
             page.GetMainPage();
             page.dropDownManMenu(page.menuContacty);
@@ -34,8 +63,18 @@ namespace SimpleTest
             wait.Until(ExpectedConditions.TextToBePresentInElement(page.messageSendStatus, "Thank you for your message. It has been sent"));
 
             Assert.IsTrue(page.messageSendStatus.Text.Contains("Thank you for your message. It has been sent"));
+        }
 
-
+        [Test]
+        public void Test3UploadFile()
+        {
+            page.GetMainPage();
+            page.iconDownloadPage.Click();
+            page.AcceptJSAlert();
+            page.btnUploadFile.SendKeys("C:\\log.txt");
+            page.btnSubmit.Click();
+            Assert.IsTrue(page.tableFiles.Text.Contains("log"));                   
+            
         }
 
         [OneTimeTearDown]

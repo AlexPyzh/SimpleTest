@@ -30,6 +30,10 @@ namespace SimpleTest.Pages
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div[1]/div/h1")]
         public IWebElement headerWordoressPage2;
 
+        //Footer======================================================================================
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/p[4]")]
+        public IWebElement Footer;
 
         //InformBlock=====================================================================================
 
@@ -116,7 +120,13 @@ namespace SimpleTest.Pages
         [FindsBy(How = How.Id, Using = "menu-item-309")]
         public IWebElement jssubmenuObschayaPidgotovka;
 
+        //Incorrect filling=====================================================================================
 
+        [FindsBy(How = How.CssSelector, Using = "#wpcf7-f1564-p88-o1 > form > p:nth-child(2) > span > span")]
+        public IWebElement AlertName;
+
+        [FindsBy(How = How.CssSelector, Using = "#wpcf7-f1564-p88-o1 > form > p:nth-child(3) > span > span")]
+        public IWebElement AlertEmail;
 
 
         //SendMail=====================================================================================
@@ -144,7 +154,23 @@ namespace SimpleTest.Pages
         public IWebElement messageSendStatus;
 
 
+        //UploadFile=====================================================================================
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div[3]/span/img")]
+        public IWebElement iconDownloadPage;
+
+
+        [FindsBy(How = How.Name, Using = "file_upload")]
+        public IWebElement btnUploadFile;
+
+        [FindsBy(How = How.Name, Using = "submit-btn")]
+        public IWebElement btnSubmit;
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div[2]/div")]
+        public IWebElement tableFiles;
+
         //=====================================================================================
+
 
         [FindsBy(How = How.Name, Using = "q")]
         public IWebElement searchText;

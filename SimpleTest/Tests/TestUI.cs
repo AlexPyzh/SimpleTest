@@ -23,6 +23,16 @@ namespace SimpleTest
         }
 
         [Test]
+        public void Test11Footer()
+        {
+            page.GetMainPage();
+            Assert.IsTrue(page.Footer.Text.Contains("Адреса"));
+            Assert.IsTrue(page.Footer.Text.Contains("Телефон"));
+            Assert.IsTrue(page.Footer.Text.Contains("e-mail"));
+            Assert.IsTrue(page.Footer.Text.Contains("ВП Атомремонтсервіс"));
+        }
+
+        [Test]
         public void Test2MenuInformBlock()
         {
             page.GetMainPage();

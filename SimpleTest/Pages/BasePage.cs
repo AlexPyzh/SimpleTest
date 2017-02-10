@@ -22,7 +22,18 @@ namespace SimpleTest
         public void GetMainPage()
         {
             GetWebDriver().Navigate().GoToUrl("http://ars.atom.gov.ua");
-        }                   
+        }
+
+        public void GetFileExchangePage()
+        {
+            GetWebDriver().Navigate().GoToUrl("http://ars.atom.gov.ua/index.php/downloads/");
+        }
+
+        public void AcceptJSAlert()
+        {
+            driver.SwitchTo().Alert().Accept();
+        }
+
 
         public BasePage(IWebDriver driver)
         {
